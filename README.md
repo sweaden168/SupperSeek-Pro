@@ -1,77 +1,57 @@
 # SupperSeek Pro
 
-极致性能的本地文件搜索与管理工具。
+**毫秒级全盘文件搜索引擎 — Windows 高性能桌面搜索工具**
 
-## 1. 项目简介
-
-SupperSeek Pro 是一款专为 Windows 设计的本地文件搜索与管理工具。它结合了 **Everything** 的毫秒级搜索性能和 **ACDSee** 的专业级文件预览体验，同时内置“数字保险库”功能，确保本地数据的绝对私密与安全。
-
-## 2. 核心功能
-
-- **毫秒级搜索**: 直接解析 NTFS MFT，实现瞬时全盘索引。
-- **专业级预览**: 选中文件按 `空格键` 即可快速预览图片、视频、PDF 及各类文档。
-- **数字保险库**: AES-256 加密存储，保护您的私密文件。
-- **高级过滤**: 支持按类型、大小、日期、扩展名等多种维度组合查询。
-- **AI 助手**: 内置 AI 助手，协助您管理文件与确认需求。
-
-## 3. 安装指南
-
-### 前置要求
-
-- Node.js (v18+)
-- npm 或 yarn
-
-### 安装步骤
-
-1. 克隆仓库：
-   ```bash
-   git clone <repository-url>
-   cd supperseek-pro
-   ```
-
-2. 安装依赖：
-   ```bash
-   npm install
-   ```
-
-3. 配置环境变量：
-   复制 `.env.example` 为 `.env`，如需本地邮件验证码服务，请填写对应的邮箱服务配置。
-
-## 4. 使用说明
-
-### 开发环境运行
-
-```bash
-npm run dev
-```
-启动后访问 `http://localhost:32173`。
-
-### 生产环境构建
-
-```bash
-npm run build
-npm start
-```
-
-### 快捷键
-
-- `空格键`: 快速预览选中文件。
-- `Esc`: 关闭预览窗口或弹出层。
-- `上下方向键`: 在文件列表中导航。
-- `双击`: 打开文件或所在目录。
-
-## 5. 项目结构
-
-- `/src`: 前端源代码 (React + Tailwind CSS)。
-- `/server.ts`: 后端 Express 服务器，集成 Vite 中间件。
-- `/PRD.md`: 产品需求文档与更新日志。
-- `/scripts`: 项目启动与构建脚本。
-
-## 6. 技术栈
-
-- **Frontend**: React 19, Tailwind CSS, Framer Motion, Lucide Icons.
-- **Backend**: Express, Node.js (模拟 Rust/Tauri 逻辑)。
-- **Tooling**: Vite, TypeScript.
+基于 Rust 内核 + Tauri 桌面框架 + React 前端构建，通过直接解析 NTFS MFT 记录实现超越系统原生的毫秒级文件检索体验。
 
 ---
-© 2026 SupperSeek Pro Team. 保留所有权利。
+
+## 核心功能
+
+- ⚡ **毫秒级全盘搜索** — 直接解析 NTFS MFT，不依赖系统索引，1 秒内返回百万级结果
+- 👁️ **100+ 格式预览** — 图片、文档(PDF/Word/Excel/PPT)、视频、PSD、AI 等，无需安装第三方软件
+- 🏷️ **文件标签管理** — 自定义标签，快速分类与筛选
+- ⭐ **收藏与工作区** — 自建收藏夹、项目管理，高效组织文件
+- 🔒 **文件保险柜** — AES-256 加密存储敏感文件
+- 📦 **文件归档** — 一键归档压缩，节省磁盘空间
+- 🔄 **USN Journal 实时同步** — 文件增删改自动感知，索引始终最新
+- 🎨 **主题系统** — 多款主色调 + 明暗模式，自由切换
+- 🔔 **消息中心** — 官方公告、版本更新实时通知
+
+---
+
+## 下载
+
+| 版本 | 说明 | 下载 |
+|------|------|------|
+| **安装版** | 通过 Setup 安装到系统 | [下载](https://github.com/sweaden168/SupperSeek-Pro/releases/latest) |
+| **便携版** | 解压即用，不留系统痕迹 | [下载](https://github.com/sweaden168/SupperSeek-Pro/releases/latest) |
+
+---
+
+## 系统要求
+
+- Windows 10 / 11 (64-bit)
+- 不需要管理员权限（便携版）
+- 推荐 8GB+ 内存
+
+---
+
+## 技术栈
+
+| 层级 | 技术 |
+|------|------|
+| 搜索内核 | Rust — 直接解析 NTFS MFT 主文件表 |
+| 桌面框架 | Tauri 2.x — 轻量级跨平台桌面框架 |
+| 前端 | React + TypeScript + Tailwind CSS |
+| 动效 | Framer Motion |
+
+---
+
+## 网站
+
+https://supperseek.sweaden.com
+
+---
+
+© 2026 SupperSeek. All rights reserved.
