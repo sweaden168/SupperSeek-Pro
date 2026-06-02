@@ -1,0 +1,26 @@
+node_modules/
+build/
+dist/
+coverage/
+.DS_Store
+*.log
+.env*
+!.env.example
+.data/
+.claude/
+file_index_v3.db
+file_index_v3.db-shm
+file_index_v3.db-wal
+# Legacy V2 DB files
+file_index_v2.db
+file_index_v2.db-shm
+file_index_v2.db-wal
+file_index_light_v1.db
+file_index_light_v1.db-shm
+file_index_light_v1.db-wal
+src-tauri/target/
+.tmp/
+thumbnail_cache/
+portable/
+dist/installer/
+portable-search/
